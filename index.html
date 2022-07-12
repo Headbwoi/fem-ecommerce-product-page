@@ -198,26 +198,46 @@
       </div>
     </header>
 
-    <main class="flex items-center justify-center flex-col lg:flex-row">
+    <main class="flex items-start lg:items-center justify-between flex-col lg:flex-row">
 
       <section class="image">
         <div class="container">
             <!-- image -->
-            <div class="images w-screen h-[18.8125rem] lg:h-[27.8125rem] lg:w-[27.9125rem] relative flex items-center justify-center">
+            <div class="images w-screen h-[18.8125rem] lg:h-[27.8125rem] lg:w-[27.9125rem] relative flex items-center justify-center overflow-hidden">
               <div class="w-full h-full absolute">
                 <img src="images/image-product-1.jpg" alt="image-product-1" class="w-full h-full object-cover object-center">
               </div>
-              <div class="w-full h-full">
+              <div class="w-full h-full absolute">
                 <img src="images/image-product-2.jpg" alt="image-product-2" class="w-full h-full object-cover object-center">
               </div>
-              <div class="w-full h-full">
+              <div class="w-full h-full absolute">
                 <img src="images/image-product-3.jpg" alt="image-product-3" class="w-full h-full object-cover object-center">
               </div>
-              <div class="w-full h-full">
+              <div class="w-full h-full absolute">
                 <img src="images/image-product-4.jpg" alt="image-product-4" class="w-full h-full object-cover object-center">
               </div>
             </div>
           </div>
+      </section>
+
+      <section class="text" aria-labelledby="heading">
+        <div class="container">
+          <div class="p-6 text-left mb-8">
+            <h1 class="text-Orange text-sm font-bold uppercase mb-5">Sneaker Company</h1>
+            <h2 class="text-VeryDarkBlue font-bold text-3xl md:text-4xl lg:text-5xl mb-7" id="heading">Fall Limited Edition Sneakers</h2>
+            <p class="text-DarkGrayishBlue">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+              durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          </div>
+          <div class="px-6 flex items-center justify-between md:block">
+            <div class="product_price flex items-center justify-between space-x-4">
+              <p class="text-VeryDarkBlue text-3xl">$125.00</p>
+              <p class="w-[3.25rem] h-6 bg-PaleOrange rounded-md">50%</p>
+            </div>
+            <div>
+              <p class="text-GrayishBlue">$250.00</p>
+            </div>
+          </div>
+        </div>
       </section>
       
 
@@ -225,16 +245,6 @@
 
     <!-- 
   
-  
-  
-  
-
-  Sneaker Company
-
-  Fall Limited Edition Sneakers
-
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
 
   $125.00
   50%
