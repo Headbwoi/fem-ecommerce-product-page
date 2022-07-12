@@ -7,7 +7,21 @@
 .line{
     @apply relative after:absolute after:-bottom-[2.9375rem] after:left-0 after:w-full after:h-1 after:bg-Orange after:scale-0 after:duration-500 hover:after:scale-100
 }
+.mobilemenu.active{
+    left: 0;
+}
+.cart{
+    width: calc(100vw - 1rem);
+}
+@media (min-width: 640px) {
+    .cart {
+        width: 22.6875rem;
+    }
+}
 
+.overlay{
+    @apply fixed inset-0 bg-VeryDarkBlue/90 duration-500
+  }
 /* - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
 - Weights: 400, 700 */
 /* .attribution { font-size: 11px; text-align: center; }

@@ -9,10 +9,12 @@
   <title>Frontend Mentor | E-commerce product page</title>
   <link rel="stylesheet" href="public/output.css">
 
+  <script src="index.js" defer></script>
+
 </head>
 <body>
 
-  <header class="flex items-center justify-between">
+  <header class="flex items-center justify-between relative">
     <div class="container">
       <nav class="relative flex items-center justify-between h-[4.25rem] md:h-[5.65rem] lg:h-[7.1875rem] lg:border-b lg:border-GrayishBlue px-6 md:px-12 lg:px-0">
 
@@ -20,7 +22,7 @@
         <div class="flex items-center">
         <!-- hamburger -->
         <div class="md:hidden mr-4">
-          <svg width="16" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd"/></svg>
+          <svg class="hamburger" width="16" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M16 12v3H0v-3h16Zm0-6v3H0V6h16Zm0-6v3H0V0h16Z" fill="#69707D" fill-rule="evenodd"/></svg>
         </div>
         <!-- logo -->
           <div class="logo mr-14">
@@ -54,8 +56,30 @@
         </div>
 
         <!-- mobilemenu -->
+        <div class="mobilemenu absolute top-0 -left-full w-[70%] h-screen bg-White flex flex-col px-7 md:hidden duration-500">
+          <div class="mt-8 mb-14">
+            <svg class="cursor-pointer close" width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
+          </div>
+          <ul class="list-none flex flex-col space-y-7">
+              <li class="no-underline text-xl tracking-wide text-VeryDarkBlue font-bold"><a class="line" href="#">Collections</a></li>
+              <li class="no-underline text-xl tracking-wide text-VeryDarkBlue font-bold"><a class="line" href="#">Men</a></li>
+              <li class="no-underline text-xl tracking-wide text-VeryDarkBlue font-bold"><a class="line" href="#">Women</a></li>
+              <li class="no-underline text-xl tracking-wide text-VeryDarkBlue font-bold"><a class="line" href="#">About</a></li>
+              <li class="no-underline text-xl tracking-wide text-VeryDarkBlue font-bold"><a class="line" href="#">Contact</a></li>
+            </ul>
 
+        </div>
       </nav>
+
+      <div class="cart absolute top-[4.75rem] left-1/2 -translate-x-1/2 min-h-[16.25rem] sm:w-[22.6875rem] bg-Orange rounded-md py-7 ">
+        <p class="capitalize px-6 font-bold text-lg text-VeryDarkBlue pb-7 border-b border-GrayishBlue">cart</p>
+
+        <div class="item pt-6 px-6">
+          <div class="flex items-center justify-center">
+            <img src="images/image-product-1-thumbnail.jpg" alt="" class="w-[3.125rem] h-[3.125rem] rounded-md ">
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
