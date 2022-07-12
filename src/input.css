@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 
+
+.line{
+    @apply relative after:absolute after:-bottom-[2.9375rem] after:left-0 after:w-full after:h-1 after:bg-Orange after:scale-0 after:duration-500 hover:after:scale-100
+}
+
 /* - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
 - Weights: 400, 700 */
 /* .attribution { font-size: 11px; text-align: center; }
