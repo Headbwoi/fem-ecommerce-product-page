@@ -638,6 +638,10 @@ video {
   margin-bottom: 1.75rem;
 }
 
+.-mt-10 {
+  margin-top: -2.5rem;
+}
+
 .mb-8 {
   margin-bottom: 2rem;
 }
@@ -648,10 +652,6 @@ video {
 
 .mb-4 {
   margin-bottom: 1rem;
-}
-
-.-mt-10 {
-  margin-top: -2.5rem;
 }
 
 .block {
@@ -1307,18 +1307,9 @@ video {
     border-color: hsl(220 14% 75% / var(--tw-border-opacity));
   }
 
-  .lg\:p-\[5\.625rem\] {
-    padding: 5.625rem;
-  }
-
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
-  }
-
-  .lg\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
   }
 
   .lg\:py-\[5\.625rem\] {
@@ -1326,8 +1317,9 @@ video {
     padding-bottom: 5.625rem;
   }
 
-  .lg\:pt-\[5\.625rem\] {
-    padding-top: 5.625rem;
+  .lg\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .lg\:text-5xl {
