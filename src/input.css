@@ -21,7 +21,16 @@
 
 .overlay{
     @apply fixed inset-0 bg-VeryDarkBlue/90 duration-500
-  }
+}
+.thumbnail:hover img{
+    @apply opacity-50 
+}
+.thumbnail.active{
+    @apply ring-2 ring-Orange
+}
+.thumbnail.active img{
+    opacity: .5;
+}
 /* - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
 - Weights: 400, 700 */
 /* .attribution { font-size: 11px; text-align: center; }
