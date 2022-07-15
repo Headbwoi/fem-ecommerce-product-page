@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="E-commerce product page">
     <!-- displays site properly based on user's device -->
 
     <link
@@ -105,7 +106,7 @@
               </p>
             </div>
             <div
-              class="avatar w-8 h-8 md:w-[3.375rem] md:h-[3.375rem] rounded-full border-2 border-White hover:border-Orange cursor-pointer"
+              class="avatar w-8 h-8 md:w-[3.375rem] md:h-[3.375rem] rounded-full border-2 border-White hover:border-Orange cursor-pointer duration-300"
             >
               <img src="images/image-avatar.png" aria-hidden="true" />
             </div>
@@ -113,8 +114,9 @@
 
           <!-- mobilemenu -->
           <div
-            class="mobilemenu absolute top-0 -left-full w-[70%] h-screen bg-White flex flex-col px-7 md:hidden duration-500"
+            class="mobilemenu absolute top-0 -left-full w-screen h-screen bg-VeryDarkBlue/80 flex flex-col px-7 md:hidden duration-500 z-50"
           >
+          <div class="w-[66.67%] absolute top-0 left-0 pl-7 bg-White h-screen">
             <div class="mt-8 mb-14">
               <svg
                 class="cursor-pointer close"
@@ -156,6 +158,8 @@
                 <a class="line" href="#">Contact</a>
               </li>
             </ul>
+          </div>
+            
           </div>
         </nav>
 
@@ -205,19 +209,26 @@
       
       <section class="image block">
             <!-- image -->
-            <div class="images w-screen h-[18.8125rem] lg:h-[27.8125rem] lg:w-[27.9125rem] relative flex items-center justify-center overflow-hidden lg:rounded-2xl lg:mb-8">
-              <div class="w-full h-full absolute">
-                <img src="images/image-product-1.jpg" alt="image-product-1" class="w-full h-full object-cover object-center">
+            <div class="images w-screen h-[18.8125rem] lg:h-[27.8125rem] lg:w-[27.9125rem] relative flex items-center justify-center lg:rounded-2xl lg:mb-8 overflow-hidden">
+              <!-- image slide -->
+              <div class="flex ">
+                <img src="images/image-product-1.jpg" alt="image-product-1-thumbnail" class="w-full h-full object-cover object-center">
+                <img src="images/image-product-2.jpg" alt="image-product-2-thumbnail" class="w-full h-full object-cover object-center">
+                <img src="images/image-product-3.jpg" alt="image-product-3-thumbnail" class="w-full h-full object-cover object-center">
+                <img src="images/image-product-4.jpg" alt="image-product-4-thumbnail" class="w-full h-full object-cover object-center">
               </div>
-              <div class="w-full h-full absolute">
-                <img src="images/image-product-2.jpg" alt="image-product-2" class="w-full h-full object-cover object-center">
-              </div>
-              <div class="w-full h-full absolute">
-                <img src="images/image-product-3.jpg" alt="image-product-3" class="w-full h-full object-cover object-center">
-              </div>
-              <div class="w-full h-full absolute">
-                <img src="images/image-product-4.jpg" alt="image-product-4" class="w-full h-full object-cover object-center">
-              </div>
+            <!-- mobile slider -->
+            <div class="mobileslider" data-sliderMobile>
+              <div class="toggle-icons-mobile lg:hidden">
+                <div class="absolute top-1/2 -translate-y-1/2
+                 right-4 w-11 h-11 bg-White rounded-full grid place-items-center cursor-pointer group duration-200">
+                  <svg class="text-VeryDarkBlue group-hover:text-Orange" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+                </div>
+                <div class="absolute top-1/2 -translate-y-1/2 left-4 right-4 w-11 h-11 bg-White rounded-full grid place-items-center cursor-pointer group duration-200">
+                  <svg class="text-VeryDarkBlue group-hover:text-Orange" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+                </div>
+            </div>
+            </div>
             </div>
 
             <!-- thumbnails -->
@@ -244,11 +255,11 @@
             </div>
       </section>
 
-      <section class="text -mt-10" aria-labelledby="heading">
+      <section class="text lg:-mt-10" aria-labelledby="heading">
           <div class="p-6 text-left mb-8">
             <h1 class="text-Orange text-sm font-bold uppercase mb-5">Sneaker Company</h1>
             <h2 class="text-VeryDarkBlue font-bold text-3xl md:text-4xl lg:text-5xl mb-7" id="heading">Fall Limited Edition Sneakers</h2>
-            <p class="text-DarkGrayishBlue">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            <p class="text-DarkGrayishBlue font-normal">These low-profile sneakers are your perfect casual wear companion. Featuring a 
               durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
           </div>
           <!-- price info -->
@@ -258,7 +269,7 @@
               <p class="w-[3.25rem] h-6 text-Orange font-bold bg-PaleOrange rounded-md grid place-items-center">50%</p>
             </div>
             <div>
-              <p class="text-GrayishBlue relative after:absolute after:w-12 after:h-[1.5px] after:bg-GrayishBlue after:left-0 after:top-1/2 after:-translate-y-1/2">$250.00</p>
+              <p class="text-GrayishBlue relative after:absolute after:w-12 after:h-[1.5px] after:bg-GrayishBlue after:left-0 after:top-1/2 after:-translate-y-1/2 font-normal">$250.00</p>
             </div>
           </div>
 
@@ -266,13 +277,13 @@
           <div class="block md:flex md:items-center md:space-x-4 px-6 mb-7">
 
             <!-- product count -->
-            <div class="product-count h-14 w-full md:w-40 bg-LightGrayishBlue px-6 flex items-center justify-between rounded-lg mb-4 md:mb-0">
+            <div class="product-count h-14 w-full md:w-40 bg-LightGrayishBlue px-6 flex items-center justify-between rounded-lg mb-4 md:mb-0 group cursor-pointer">
               <div>
-                <svg class="cursor-pointer" width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/></svg>
+                <svg class="cursor-pointer text-Orange group-hover:text-Orange/60" width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="currentColor" fill-rule="nonzero" xlink:href="#a"/></svg>
               </div>
               <p class="text-VeryDarkBlue font-bold text-lg">0</p>
               <div>
-                <svg class="cursor-pointer" width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b"/></svg>
+                <svg class="cursor-pointer text-Orange group-hover:text-Orange/60" width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="currentColor" fill-rule="nonzero" xlink:href="#b"/></svg>
               </div>
             </div>
 
@@ -289,25 +300,25 @@
     </div>
 
       <!-- modal  -->
-        <div class="hidden modal absolute left-0 top-0 z-40 bg-lightboxBackground/90 w-full h-full lg:flex justify-center items-center flex-col ">
+        <div class="hidden modal absolute left-0 top-0 z-40 bg-lightboxBackground/90 w-full h-full  justify-center items-center flex-col ">
 
           <div>
-            <svg class=" translate-x-[16.875rem] -translate-y-3 cursor-pointer" width="24" height="25" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#fff" fill-rule="evenodd"/></svg>
+            <svg class="text-White hover:text-Orange translate-x-[16.875rem] -translate-y-3 cursor-pointer" width="24" height="25" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="currentColor" fill-rule="evenodd"/></svg>
           </div>
 
           <div class="w-[34.5625rem] h-[34.6975rem] flex rounded-xl mb-10  relative">
-            <div class="images">
+            <div class="images flex overflow-hidden" data-sliderModal>
               <img src="images/image-product-1.jpg" alt="image-product-1-thumbnail" class="w-full h-full object-cover object-center">
-              <img src="images/image-product-2.jpg" alt="image-product-2-thumbnail" class="w-full h-full object-cover object-center hidden">
-              <img src="images/image-product-3.jpg" alt="image-product-3-thumbnail" class="w-full h-full object-cover object-center hidden">
-              <img src="images/image-product-4.jpg" alt="image-product-4-thumbnail" class="w-full h-full object-cover object-center hidden">
+              <img src="images/image-product-2.jpg" alt="image-product-2-thumbnail" class="w-full h-full object-cover object-center">
+              <img src="images/image-product-3.jpg" alt="image-product-3-thumbnail" class="w-full h-full object-cover object-center">
+              <img src="images/image-product-4.jpg" alt="image-product-4-thumbnail" class="w-full h-full object-cover object-center">
             </div>
             <div class="toggle-icons">
-              <div class="absolute top-1/2 -translate-x-1/2 w-[3.75rem] h-[3.75rem] bg-White rounded-full grid place-items-center z-50 cursor-pointer">
-                <svg class="hover:stroke-Orange" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+              <div class="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-[3.75rem] h-[3.75rem] bg-White rounded-full grid place-items-center z-50 cursor-pointer group duration-200">
+                <svg class="text-VeryDarkBlue group-hover:text-Orange" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
               </div>
-            <div class="absolute top-1/2 -translate-x-1/2 left-0 w-[3.75rem] h-[3.75rem] bg-White rounded-full grid place-items-center z-50 cursor-pointer">
-                <svg class="hover:stroke-Orange" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+              <div class="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-0 w-[3.75rem] h-[3.75rem] bg-White rounded-full grid place-items-center z-50 cursor-pointer group duration-200">
+                <svg class="text-VeryDarkBlue group-hover:text-Orange" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
               </div>
           </div>
           </div>
