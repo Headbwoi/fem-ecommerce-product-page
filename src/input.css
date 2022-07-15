@@ -19,9 +19,6 @@
     }
 }
 
-.overlay{
-    @apply fixed inset-0 bg-VeryDarkBlue/90 duration-500
-}
 .thumbnail:hover img{
     @apply opacity-50 
 }

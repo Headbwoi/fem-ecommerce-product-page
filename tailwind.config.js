@@ -8,8 +8,7 @@ module.exports = {
     screens: {
       sm: "640px",
       md: "768px",
-      lg: "992px",
-      xl: "1115px",
+      lg: "1115px",
     },
     colors: {
       Orange: "hsl(26, 100%, 55%)",

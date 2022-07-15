@@ -15,18 +15,19 @@
 
     <title>Frontend Mentor | E-commerce product page</title>
     <link rel="stylesheet" href="public/output.css" />
+
     <script src="index.js" defer></script>
   </head>
   <body class="font-sans min-h-screen relative">
     <header class="flex items-center justify-between relative ">
       <div class="container">
         <nav
-          class="relative flex items-center justify-between h-[4.25rem] md:h-[5.65rem] lg:h-[6.5rem] xl:h-[7.1875rem] xl:border-b xl:border-GrayishBlue px-6 md:px-0 xl:px-0"
+          class="relative flex items-center justify-between h-[4.25rem] md:h-[5.65rem] lg:h-[7.1875rem] lg:border-b lg:border-GrayishBlue px-6 md:px-12 lg:px-0"
         >
           <!-- left contents -->
           <div class="flex items-center">
             <!-- hamburger -->
-            <div class="lg::hidden mr-4">
+            <div class="md:hidden mr-4">
               <svg
                 class="hamburger"
                 width="16"
@@ -52,30 +53,30 @@
             </div>
 
             <!-- links -->
-            <div class="hidden lg:flex lg:items-center">
+            <div class="hidden md:flex md:items-center">
               <ul class="list-none flex space-x-[2.125rem]">
                 <li
-                  class="no-underline text-DarkGrayishBlue text-xl tracking-wide font-normal hover:text-VeryDarkBlue"
+                  class="no-underline text-DarkGrayishBlue text-lg tracking-wide font-normal hover:text-VeryDarkBlue"
                 >
                   <a class="line" href="#">Collections</a>
                 </li>
                 <li
-                  class="no-underline text-DarkGrayishBlue text-xl tracking-wide font-normal hover:text-VeryDarkBlue"
+                  class="no-underline text-DarkGrayishBlue text-lg tracking-wide font-normal hover:text-VeryDarkBlue"
                 >
                   <a class="line" href="#">Men</a>
                 </li>
                 <li
-                  class="no-underline text-DarkGrayishBlue text-xl tracking-wide font-normal hover:text-VeryDarkBlue"
+                  class="no-underline text-DarkGrayishBlue text-lg tracking-wide font-normal hover:text-VeryDarkBlue"
                 >
                   <a class="line" href="#">Women</a>
                 </li>
                 <li
-                  class="no-underline text-DarkGrayishBlue text-xl tracking-wide font-normal hover:text-VeryDarkBlue"
+                  class="no-underline text-DarkGrayishBlue text-lg tracking-wide font-normal hover:text-VeryDarkBlue"
                 >
                   <a class="line" href="#">About</a>
                 </li>
                 <li
-                  class="no-underline text-DarkGrayishBlue text-xl tracking-wide font-normal hover:text-VeryDarkBlue"
+                  class="no-underline text-DarkGrayishBlue text-lg tracking-wide font-normal hover:text-VeryDarkBlue"
                 >
                   <a class="line" href="#">Contact</a>
                 </li>
@@ -84,8 +85,8 @@
           </div>
 
           <!-- right contents -->
-          <div class="flex items-center space-x-5 md:space-x-7 lg:space-x-9 xl:space-x-10">
-            <div class="relative">
+          <div class="flex items-center space-x-5 md:space-x-10">
+            <div class="relative" data-cartToggle>
               <svg
                 class="hover:cursor-pointer"
                 width="22"
@@ -164,34 +165,34 @@
 
         <!-- cart card -->
         <div
-          class="cart absolute top-[4.75rem] md:top-[5.6875rem] left-1/2 -translate-x-1/2 h-[17.25rem] sm:w-[22.6875rem] xl:right-0 xl:translate-x-[80%] bg-White rounded-xl py-7 overflow-y-auto shadow-2xl z-50"
+          class="cart absolute top-[4.75rem] md:top-[5.6875rem] left-1/2 -translate-x-1/2 h-[17.25rem] sm:w-[22.6875rem] md:right-0 md:translate-x-[80%] bg-White rounded-lg py-7 overflow-y-auto shadow-2xl z-50 hidden"
         >
           <p
-            class="capitalize px-6 font-bold text-xl text-VeryDarkBlue pb-7 border-b border-GrayishBlue"
+            class="capitalize px-6 font-bold text-lg text-VeryDarkBlue pb-7 border-b border-GrayishBlue"
           >
             cart
           </p>
 
           <div class="flex items-center justify-center flex-col h-[70%]">
-            <p class="text-base font-bold text-DarkGrayishBlue">Your cart is empty</p>
+            <!-- <p class="text-base font-bold text-DarkGrayishBlue">Your cart is empty</p> -->
             
              <!-- item -->
-          <!-- <div class="item pt-6 px-6 mb-6">
+          <div class="item pt-6 px-6 mb-6">
               <div class="flex items-center justify-center">
             <img src="images/image-product-1-thumbnail.jpg" aria-hidden="true" class="w-[3.25rem] h-[3.25rem] rounded-md mr-4">
             <div class="block mr-4">
               <p class="capitalize text-GrayishBlue text-base font-normal">fall limited edition snickers </p>
-              <p class="text-xl text-GrayishBlue font-normal">$125 x <span class="count">3</span> <span class="amount text-VeryDarkBlue">$375.00</span></p>
+              <p class="text-lg text-GrayishBlue font-normal">$125 x <span class="count">3</span> <span class="amount text-VeryDarkBlue">$375.00</span></p>
             </div>
             <div>
               <svg class="cursor-pointer delete" width="14" height="16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M0 2.625V1.75C0 1.334.334 1 .75 1h3.5l.294-.584A.741.741 0 0 1 5.213 0h3.571a.75.75 0 0 1 .672.416L9.75 1h3.5c.416 0 .75.334.75.75v.875a.376.376 0 0 1-.375.375H.375A.376.376 0 0 1 0 2.625Zm13 1.75V14.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 1 14.5V4.375C1 4.169 1.169 4 1.375 4h11.25c.206 0 .375.169.375.375ZM4.5 6.5c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Zm3 0c0-.275-.225-.5-.5-.5s-.5.225-.5.5v7c0 .275.225.5.5.5s.5-.225.5-.5v-7Z" id="a"/></defs><use fill="#C3CAD9" fill-rule="nonzero" xlink:href="#a"/></svg>
             </div>
           </div>
-        </div> -->
+        </div>
         <!-- checkout -->
-          <!-- <div class="px-6">
-        <button class="w-full h-[3.375rem] bg-Orange rounded-md capitalize text-LightGrayishBlue text-xl tracking-wide font-bold">checkout</button>
-       </div> -->
+          <div class="px-6">
+        <button class="w-full h-[3.375rem] bg-Orange rounded-md capitalize text-LightGrayishBlue text-lg tracking-wide font-bold">checkout</button>
+       </div>
           </div>
 
          
@@ -203,12 +204,12 @@
 
     <main class="">
 
-      <div class="container flex items-start xl:items-center justify-center flex-col xl:flex-row xl:space-x-[7.8125rem] xl:py-[5.625rem] xl:px-6">
+      <div class="container flex items-start lg:items-center justify-center flex-col lg:flex-row lg:space-x-[7.8125rem] lg:py-[5.625rem] lg:px-6">
 
       
       <section class="image block">
             <!-- image -->
-            <div class="images w-screen h-[18.8125rem] xl:h-[27.8125rem] xl:w-[27.9125rem] relative flex items-center justify-center xl:rounded-2xl xl:mb-8 overflow-hidden">
+            <div class="images w-screen h-[18.8125rem] lg:h-[27.8125rem] lg:w-[27.9125rem] relative flex items-center justify-center lg:rounded-2xl lg:mb-8 overflow-hidden">
               <!-- image slide -->
               <div class="flex ">
                 <img src="images/image-product-1.jpg" alt="image-product-1-thumbnail" class="w-full h-full object-cover object-center">
@@ -218,12 +219,12 @@
               </div>
             <!-- mobile slider -->
             <div class="mobileslider" data-sliderMobile>
-              <div class="toggle-icons-mobile xl:hidden">
+              <div class="toggle-icons-mobile lg:hidden">
                 <div class="absolute top-1/2 -translate-y-1/2
-                 right-4 w-11 h-11 bg-White rounded-full grid place-items-center cursor-pointer group duration-200">
+                 right-4 w-11 h-11 bg-White rounded-full grid place-items-center z-40 cursor-pointer group duration-200">
                   <svg class="text-VeryDarkBlue group-hover:text-Orange" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
                 </div>
-                <div class="absolute top-1/2 -translate-y-1/2 left-4 right-4 w-11 h-11 bg-White rounded-full grid place-items-center cursor-pointer group duration-200">
+                <div class="absolute top-1/2 -translate-y-1/2 left-4 right-4 w-11 h-11 bg-White rounded-full grid place-items-center z-40 cursor-pointer group duration-200">
                   <svg class="text-VeryDarkBlue group-hover:text-Orange" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
                 </div>
             </div>
@@ -231,33 +232,33 @@
             </div>
 
             <!-- thumbnails -->
-            <div class="hidden xl:flex xl:items-center xl:justify-between w-[27.9375rem] mb-7">
+            <div class="hidden lg:flex lg:items-center lg:justify-between w-[27.9375rem] mb-7">
               <!-- image-1 -->
-              <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-xl overflow-hidden duration-300 cursor-pointer active">
+              <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-lg overflow-hidden duration-300 cursor-pointer active">
                 <img src="images/image-product-1-thumbnail.jpg" aria-hidden="true" class="w-full h-full object-center object-cover">
               </div>
 
               <!-- image-2 -->
-              <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-xl overflow-hidden duration-300 cursor-pointer">
+              <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-lg overflow-hidden duration-300 cursor-pointer">
                 <img src="images/image-product-2-thumbnail.jpg" aria-hidden="true" class="w-full h-full object-center object-cover">
               </div>
 
               <!-- image-3 -->
-              <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-xl overflow-hidden duration-300 cursor-pointer">
+              <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-lg overflow-hidden duration-300 cursor-pointer">
                 <img src="images/image-product-3-thumbnail.jpg" aria-hidden="true" class="w-full h-full object-center object-cover">
               </div>
 
               <!-- image-4 -->
-              <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-xl overflow-hidden duration-300 cursor-pointer">
+              <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-lg overflow-hidden duration-300 cursor-pointer">
                 <img src="images/image-product-4-thumbnail.jpg" aria-hidden="true" class="w-full h-full object-center object-cover">
               </div>
             </div>
       </section>
 
-      <section class="text xl:-mt-10" aria-labelledby="heading">
+      <section class="text lg:-mt-10" aria-labelledby="heading">
           <div class="p-6 text-left mb-8">
             <h1 class="text-Orange text-sm font-bold uppercase mb-5">Sneaker Company</h1>
-            <h2 class="text-VeryDarkBlue font-bold text-3xl md:text-4xl xl:text-5xl mb-7" id="heading">Fall Limited Edition Sneakers</h2>
+            <h2 class="text-VeryDarkBlue font-bold text-3xl md:text-4xl lg:text-5xl mb-7" id="heading">Fall Limited Edition Sneakers</h2>
             <p class="text-DarkGrayishBlue font-normal">These low-profile sneakers are your perfect casual wear companion. Featuring a 
               durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
           </div>
@@ -276,22 +277,22 @@
           <div class="block md:flex md:items-center md:space-x-4 px-6 mb-7">
 
             <!-- product count -->
-            <div class="product-count h-14 w-full md:w-40 bg-LightGrayishBlue px-6 flex items-center justify-between rounded-xl mb-4 md:mb-0 group cursor-pointer">
+            <div class="product-count h-14 w-full md:w-40 bg-LightGrayishBlue px-6 flex items-center justify-between rounded-lg mb-4 md:mb-0 group cursor-pointer">
               <div>
                 <svg class="cursor-pointer text-Orange group-hover:text-Orange/60" width="12" height="4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/></defs><use fill="currentColor" fill-rule="nonzero" xlink:href="#a"/></svg>
               </div>
-              <p class="text-VeryDarkBlue font-bold text-xl">0</p>
+              <p class="text-VeryDarkBlue font-bold text-lg">0</p>
               <div>
                 <svg class="cursor-pointer text-Orange group-hover:text-Orange/60" width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/></defs><use fill="currentColor" fill-rule="nonzero" xlink:href="#b"/></svg>
               </div>
             </div>
 
             <!-- add to cart -->
-            <div class="add-to-cart h-14 w-full md:w-[17rem] bg-Orange rounded-xl flex items-center justify-center space-x-4  cursor-pointer hover:bg-Orange/60 hover:shadow-xl hover:shadow-PaleOrange">
+            <div class="add-to-cart h-14 w-full md:w-[17rem] bg-Orange rounded-lg flex items-center justify-center space-x-4  cursor-pointer hover:bg-Orange/60 hover:shadow-xl hover:shadow-PaleOrange">
               <div>
                 <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#ffffff" fill-rule="nonzero"/></svg>
               </div>
-              <p class="text-White text-xl font-bold">Add to cart</p>
+              <p class="text-White text-lg font-bold">Add to cart</p>
             </div>
 
           </div>
@@ -324,24 +325,24 @@
 
           
           <!-- thumbnails -->
-          <div class="xl:flex xl:items-center xl:justify-between w-[27.9375rem] mb-7">
+          <div class="lg:flex lg:items-center lg:justify-between w-[27.9375rem] mb-7">
             <!-- image-1 -->
-            <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-xl overflow-hidden duration-300 cursor-pointer active">
+            <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-lg overflow-hidden duration-300 cursor-pointer active">
               <img src="images/image-product-1-thumbnail.jpg" aria-hidden="true" class="w-full h-full object-center object-cover">
             </div>
 
             <!-- image-2 -->
-            <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-xl overflow-hidden duration-300 cursor-pointer">
+            <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-lg overflow-hidden duration-300 cursor-pointer">
               <img src="images/image-product-2-thumbnail.jpg" aria-hidden="true" class="w-full h-full object-center object-cover">
             </div>
 
             <!-- image-3 -->
-            <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-xl overflow-hidden duration-300 cursor-pointer">
+            <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-lg overflow-hidden duration-300 cursor-pointer">
               <img src="images/image-product-3-thumbnail.jpg" aria-hidden="true" class="w-full h-full object-center object-cover">
             </div>
 
             <!-- image-4 -->
-            <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-xl overflow-hidden duration-300 cursor-pointer">
+            <div class="thumbnail w-[5.75rem] h-[5.75rem] rounded-lg overflow-hidden duration-300 cursor-pointer">
               <img src="images/image-product-4-thumbnail.jpg" aria-hidden="true" class="w-full h-full object-center object-cover">
             </div>
           </div>
