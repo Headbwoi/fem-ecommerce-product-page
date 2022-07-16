@@ -2,27 +2,6 @@
 const mobileMenu = document.querySelector(".mobilemenu")
 const hamburger = document.querySelector(".hamburger")
 const close = document.querySelector(".close")
-//cart elements//
-const cartToggle = document.querySelector("[data-cartToggle]")
-const cartCard = document.querySelector("[data-cartCard]")
-
-//thumbails desktop//
-const thumbnailContainer = document.querySelector("[data-thumbnails]")
-const thumbnails = [...thumbnailContainer.querySelectorAll(".thumbnail")]
-
-//slider
-const mobileSliderRight = document.querySelector("[data-sliderMobileRight]")
-const mobileSliderLeft = document.querySelector("[data-sliderMobileLeft]")
-const imagesSlideContainer = document.querySelector("[data-imagesSlide]")
-const imagesSlide = [...imagesSlideContainer.querySelectorAll("img")]
-
-//modal elements//
-const modal = document.querySelector("[data-Modal]")
-const modalIconClose = document.querySelector("[data-Modal-Icon]")
-const modalIconRight = document.querySelector("[data-modal-right]")
-const modalIconLeft = document.querySelector("[data-modal-left]")
-const modalSliderContainer = document.querySelector("[data-sliderModal]")
-const modalSlides = [...modalSliderContainer.querySelectorAll("img")]
 
 //mobile menu toggle//
 hamburger.addEventListener("click", () => {
@@ -32,12 +11,12 @@ close.addEventListener("click", () => {
   mobileMenu.classList.remove("active")
 })
 
-//cart  card toggle
-cartToggle.addEventListener("click", () => {
-  cartCard.classList.toggle("hidden")
-})
 
-
+//slider
+const mobileSliderRight = document.querySelector("[data-sliderMobileRight]")
+const mobileSliderLeft = document.querySelector("[data-sliderMobileLeft]")
+const imagesSlideContainer = document.querySelector("[data-imagesSlide]")
+const imagesSlide = [...imagesSlideContainer.querySelectorAll("img")]
 
 imagesSlideContainer.style.transform = "translateX(0px)"
 
@@ -67,6 +46,11 @@ const slideImageMobile = (direction) => {
 mobileSliderRight.addEventListener("click", () => slideImageMobile("right"))
 mobileSliderLeft.addEventListener("click", () => slideImageMobile("left"))
 
+
+//thumbails desktop//
+const thumbnailContainer = document.querySelector("[data-thumbnails]")
+const thumbnails = [...thumbnailContainer.querySelectorAll(".thumbnail")]
+
 let slideIndex = 0
 //image thumnbails desktop//
 const removeThumbnailActiveClass = () => {
@@ -88,6 +72,17 @@ function changeSlide(n){
   })
   imagesSlide[slideIndex].style.display = "flex"
 }
+
+//modal elements//
+const modal = document.querySelector("[data-Modal]")
+const modalIconClose = document.querySelector("[data-Modal-Icon]")
+const modalIconRight = document.querySelector("[data-modal-right]")
+const modalIconLeft = document.querySelector("[data-modal-left]")
+const modalSliderContainer = document.querySelector("[data-sliderModal]")
+const modalSlides = [...modalSliderContainer.querySelectorAll("img")]
+const modalThumbnailContainer = document.querySelector("[data-modal-thumbnail]")
+const modalThumbnails = [...modalThumbnailContainer.querySelectorAll(".thumbnail")]
+
 
 //desktop event listener for modal
 imagesSlide.forEach((img, index) => {
@@ -135,3 +130,36 @@ const slideImageModal = (direction) => {
 }
 modalIconRight.addEventListener("click", () => slideImageModal("right"))
 modalIconLeft.addEventListener("click", () => slideImageModal("left"))
+
+//image thumnbails desktop//
+const removeModalThumbnailActiveClass = () => {
+  modalThumbnails.forEach(thumbnail => {
+    thumbnail.classList.remove("active")
+  })
+}
+modalThumbnails.forEach((thumb, index) => {
+  thumb.addEventListener("click", () => {
+    removeModalThumbnailActiveClass()
+    thumb.classList.add("active")
+    changeModal(slideModal = index)
+  })
+})
+let slideModal = 0
+function changeModal(n){
+  let width = modalSliderContainer.clientWidth
+  let imgLength = modalSlides.length - 1
+  if(n > imgLength){n = 0}
+  if(n < 0){n = imgLength}
+  modalSlides[n].style.transform = `translateX(-${
+      n * width
+    }px)`
+}
+
+//cart elements//
+const cartToggle = document.querySelector("[data-cartToggle]")
+const cartCard = document.querySelector("[data-cartCard]")
+
+//cart  card toggle
+cartToggle.addEventListener("click", () => {
+  cartCard.classList.toggle("hidden")
+})
