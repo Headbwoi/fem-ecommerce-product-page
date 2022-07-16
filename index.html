@@ -213,10 +213,10 @@
             <div class="images w-screen h-[18.8125rem] lg:h-[27.8125rem] lg:w-[27.9125rem] relative flex items-center justify-center lg:rounded-2xl lg:mb-8 overflow-hidden">
               <!-- image slide -->
               <div class="flex absolute transition-transform duration-500" data-imagesSlide>
-                <img src="images/image-product-1.jpg" alt="image-product-1-thumbnail" class="w-full h-full object-cover object-center">
-                <img src="images/image-product-2.jpg" alt="image-product-2-thumbnail" class="w-full h-full object-cover object-center">
-                <img src="images/image-product-3.jpg" alt="image-product-3-thumbnail" class="w-full h-full object-cover object-center">
-                <img src="images/image-product-4.jpg" alt="image-product-4-thumbnail" class="w-full h-full object-cover object-center">
+                <img src="images/image-product-1.jpg" alt="image-product-1-thumbnail" class="w-full h-full object-cover object-center slide">
+                <img src="images/image-product-2.jpg" alt="image-product-2-thumbnail" class="w-full h-full object-cover object-center slide">
+                <img src="images/image-product-3.jpg" alt="image-product-3-thumbnail" class="w-full h-full object-cover object-center slide">
+                <img src="images/image-product-4.jpg" alt="image-product-4-thumbnail" class="w-full h-full object-cover object-center slide">
               </div>
             <!-- mobile slider -->
             <div class="mobileslider" data-sliderMobile>
@@ -306,22 +306,22 @@
           <div data-Modal-Icon>
             <svg class="text-White hover:text-Orange translate-x-[16.875rem] -translate-y-3 cursor-pointer" width="24" height="25" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="currentColor" fill-rule="evenodd"/></svg>
           </div>
-
-          <div class="w-[34.5625rem] h-[34.6975rem] flex rounded-xl mb-10  relative">
-            <div class="images flex overflow-hidden" data-sliderModal>
+          <div class="toggle-icons">
+            <div class="absolute top-[40%] right-[26%] w-[3.75rem] h-[3.75rem] bg-White rounded-full grid place-items-center z-50 cursor-pointer group duration-200" data-modal-right>
+              <svg class="text-VeryDarkBlue group-hover:text-Orange" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+            </div>
+            <div class="absolute  top-[40%] left-[26%] w-[3.75rem] h-[3.75rem] bg-White rounded-full grid place-items-center z-50 cursor-pointer group duration-200" data-modal-left>
+              <svg class="text-VeryDarkBlue group-hover:text-Orange" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+            </div>
+        </div>
+          <div class="w-[34.5625rem] h-[34.6975rem] flex  items-center justify-center rounded-xl mb-10  relative overflow-hidden">
+            <div class="images flex" data-sliderModal>
               <img src="images/image-product-1.jpg" alt="image-product-1-thumbnail" class="w-full h-full object-cover object-center">
               <img src="images/image-product-2.jpg" alt="image-product-2-thumbnail" class="w-full h-full object-cover object-center">
               <img src="images/image-product-3.jpg" alt="image-product-3-thumbnail" class="w-full h-full object-cover object-center">
               <img src="images/image-product-4.jpg" alt="image-product-4-thumbnail" class="w-full h-full object-cover object-center">
             </div>
-            <div class="toggle-icons">
-              <div class="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-[3.75rem] h-[3.75rem] bg-White rounded-full grid place-items-center z-50 cursor-pointer group duration-200">
-                <svg class="text-VeryDarkBlue group-hover:text-Orange" width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
-              </div>
-              <div class="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 left-0 w-[3.75rem] h-[3.75rem] bg-White rounded-full grid place-items-center z-50 cursor-pointer group duration-200">
-                <svg class="text-VeryDarkBlue group-hover:text-Orange" width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="currentColor" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
-              </div>
-          </div>
+            
           </div>
 
           
