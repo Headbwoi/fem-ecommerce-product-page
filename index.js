@@ -143,8 +143,8 @@ function changeModal(n){
 const cartToggle = document.querySelector("[data-cartToggle]")
 const cartCard = document.querySelector("[data-cartCard]")
 const numberInCartEl = document.querySelector("[data-cart-count]")
-const cartCardDeleteEl = document.querySelector("[data-item-delete]")
 const cartCardItemEl = document.querySelector("[data-cart-item]")
+const cartCardDeleteEl = document.querySelector("[data-item-delete]")
 const cartItemPrice = document.querySelector("#price")
 const cartItemCount = document.querySelector(".count")
 const cartItemAmount = document.querySelector(".amount")
@@ -165,23 +165,43 @@ let productCount = 0
 productCountMinusEl.addEventListener("click", () => {
   if(productCount < 0)return
   productCountEl.innerText = productCount--
+  updateCartCount(productCount)
 })
 productCountPlusEl.addEventListener("click", () => {
-  productCountEl.innerText = productCount++
+  productCountEl.innerText = productCount += 1
+  updateCartCount(productCount)
 })
 
-numberInCartEl.innerText = productCount
+function updateCartCount(count){ 
+  if(count < 0)return
+  if (count == undefined){
+     numberInCartEl.classList.add("hidden")
+  }else{
+    numberInCartEl.classList.remove("hidden")
+  }
+  numberInCartEl.innerText = count
+}
 
 const calculatePrice = () => {
   cartItemCount.innerText = productCount
-  let calc = Number(cartItemCount.innerText) * 125
+  let fixedPrice = parseFloat(cartItemPrice.innerText)
+  let calc = Number(cartItemCount.innerText) * fixedPrice
   cartItemAmount.innerText = `$${calc}.00`
 }
 
 addToCartEl.addEventListener("click", () => {
-  if (productCount == 0) {
-    emptyCartTextEl.classList.remove("hidden")
-
+  let count = Number(cartItemCount.innerText)
+  if (count !== 0) {
+    emptyCartTextEl.classList.add("hidden")
+    itemCheckoutEl.classList.remove("hidden")
+    cartCardItemEl.classList.remove("hidden")
   }
   calculatePrice()
 })
+
+cartCardDeleteEl.addEventListener("click", () => {
+  cartCardItemEl.classList.add("hidden")
+  itemCheckoutEl.classList.add("hidden")
+})
+
+updateCartCount()
