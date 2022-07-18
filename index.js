@@ -202,6 +202,8 @@ addToCartEl.addEventListener("click", () => {
 cartCardDeleteEl.addEventListener("click", () => {
   cartCardItemEl.classList.add("hidden")
   itemCheckoutEl.classList.add("hidden")
+  emptyCartTextEl.classList.remove("hidden")
+
 })
 
 updateCartCount()
