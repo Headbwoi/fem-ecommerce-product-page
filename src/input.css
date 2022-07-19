@@ -1,84 +1,88 @@
-/* - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
-- Weights: 400, 700 */
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.line{
-    @apply relative after:absolute after:-bottom-[2.9375rem] after:left-0 after:w-full after:h-1 after:bg-Orange after:scale-0 after:duration-500 hover:after:scale-100
+.line {
+  @apply relative after:absolute after:-bottom-[2.9375rem] after:left-0 after:w-full after:h-1 after:bg-Orange after:scale-0 after:duration-500 hover:after:scale-100;
 }
-.mobilemenu.active{
-    left: 0;
+.mobilemenu.active {
+  left: 0;
 }
-.cart{
-    width: calc(100vw - 1rem);
-    margin: 0 auto;
+.cart {
+  width: calc(100vw - 1rem);
+  margin: 0 auto;
 }
 @media (min-width: 640px) {
-    .cart {
-        width: 22.6875rem;
-    }
+  .cart {
+    width: 22.6875rem;
+  }
 }
 
-.thumbnail:hover img{
-    @apply opacity-50 
+.thumbnail:hover img {
+  @apply opacity-50;
 }
-.thumbnail.active{
-    @apply ring-2 ring-Orange
+.thumbnail.active {
+  @apply ring-2 ring-Orange;
 }
-.thumbnail.active img{
-    opacity: .5;
+.thumbnail.active img {
+  opacity: 0.5;
 }
 
-.fade-in{
-    animation: fadein 500ms ease-in-out forwards;
+.fade-in {
+  animation: fadein 500ms ease-in-out forwards;
 }
 @keyframes fadein {
-    0%{
-        opacity: 0;
-        transform: scale(0);
-    }
-    100%{
-        opacity: 1;
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-.fade-out{
-    animation: fadeout 500ms ease-in-out;
+.fade-out {
+  animation: fadeout 500ms ease-in-out;
 }
 @keyframes fadeout {
-    0%{
-        opacity: 1;
-        transform: scale(1);
-    }
-    100%{
-        opacity: 0;
-        transform: scale(0);
-    }
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
 }
 
-.slide{
-    animation: slide 300ms ease-in-out;
+.slide {
+  animation: slide 300ms ease-in-out;
 }
 @keyframes slide {
-    0%{
-        opacity: .7;
-    }
-    100%{
-        opacity: 1;
-    }
+  0% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
 }
-.success{
-    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-Orange rounded-full
-}
-
-.leftArrow{
-    @apply bg-PaleOrange -rotate-45 w-2 h-10 absolute top-1/2 left-[30%] -translate-y-1/2
-}
-.rightArrow{
-    @apply bg-PaleOrange rotate-45 w-2 h-16 absolute top-1/2 right-[37%] -translate-y-[60%]
+.success {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-Orange rounded-full;
 }
 
-.attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+.leftArrow {
+  @apply bg-PaleOrange -rotate-45 w-2 h-10 absolute top-1/2 left-[30%] -translate-y-1/2;
+}
+.rightArrow {
+  @apply bg-PaleOrange rotate-45 w-2 h-16 absolute top-1/2 right-[37%] -translate-y-[60%];
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
