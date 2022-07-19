@@ -45,14 +45,13 @@ const slideImageMobile = (direction) => {
 mobileSliderRight.addEventListener("click", () => slideImageMobile("right"))
 mobileSliderLeft.addEventListener("click", () => slideImageMobile("left"))
 
-
 //thumbails desktop//
 const thumbnailContainer = document.querySelector("[data-thumbnails]")
 const thumbnails = [...thumbnailContainer.querySelectorAll(".thumbnail")]
 
 //image thumnbails desktop//
 const removeThumbnailActiveClass = () => {
-  thumbnails.forEach(thumbnail => {
+  thumbnails.forEach((thumbnail) => {
     thumbnail.classList.remove("active")
   })
 }
@@ -64,8 +63,8 @@ thumbnails.forEach((thumbnail, index) => {
   })
 })
 
-function changeSlide(n){
-  imagesSlide.forEach(img => {
+function changeSlide(n) {
+  imagesSlide.forEach((img) => {
     img.style.display = "none"
   })
   imagesSlide[n].style.display = "flex"
@@ -79,8 +78,9 @@ const modalIconLeft = document.querySelector("[data-modal-left]")
 const modalSliderContainer = document.querySelector("[data-sliderModal]")
 const modalSlideImage = modalSliderContainer.querySelector("img")
 const modalThumbnailContainer = document.querySelector("[data-modal-thumbnail]")
-const modalThumbnails = [...modalThumbnailContainer.querySelectorAll(".thumbnail")]
-
+const modalThumbnails = [
+  ...modalThumbnailContainer.querySelectorAll(".thumbnail"),
+]
 
 //desktop event listener for modal
 imagesSlide.forEach((img, index) => {
@@ -95,28 +95,32 @@ function openModal(index) {
   if (window.screen.width > 1110) {
     modal.classList.add("fade-in")
     modal.classList.remove("fade-out")
-    modalSlideImage.src=`images/image-product-${index + 1}.jpg`
+    modalSlideImage.src = `images/image-product-${index + 1}.jpg`
   }
 }
 activeModalIndex = 0
 
 function closeModal() {
-    modal.classList.remove("fade-in")
-    modal.classList.add("fade-out")
+  modal.classList.remove("fade-in")
+  modal.classList.add("fade-out")
 }
 
 modalIconClose.addEventListener("click", closeModal)
 //modal slide
 let slideIndex = 1
 const slideImageModal = (direction) => {
-  if(direction === "right"){
+  if (direction === "right") {
     slideIndex++
-    if(slideIndex > 4){slideIndex = 1}
-  }else if(direction === "left"){
+    if (slideIndex > 4) {
+      slideIndex = 1
+    }
+  } else if (direction === "left") {
     slideIndex--
-    if(slideIndex < 1){slideIndex = 4}
+    if (slideIndex < 1) {
+      slideIndex = 4
+    }
   }
-  modalSlideImage.src=`images/image-product-${slideIndex}.jpg`
+  modalSlideImage.src = `images/image-product-${slideIndex}.jpg`
 }
 
 modalIconRight.addEventListener("click", () => slideImageModal("right"))
@@ -124,7 +128,7 @@ modalIconLeft.addEventListener("click", () => slideImageModal("left"))
 
 //image thumnbails desktop//
 const removeModalThumbnailActiveClass = () => {
-  modalThumbnails.forEach(thumbnail => {
+  modalThumbnails.forEach((thumbnail) => {
     thumbnail.classList.remove("active")
   })
 }
@@ -135,8 +139,8 @@ modalThumbnails.forEach((thumb, index) => {
     changeModal(index + 1)
   })
 })
-function changeModal(n){
-  modalSlideImage.src=`images/image-product-${n}.jpg`
+function changeModal(n) {
+  modalSlideImage.src = `images/image-product-${n}.jpg`
 }
 
 //cart elements//
@@ -163,7 +167,7 @@ cartToggle.addEventListener("click", () => {
 let productCount = 0
 
 productCountMinusEl.addEventListener("click", () => {
-  if(productCount < 0)return
+  if (productCount < 0) return
   productCountEl.innerText = productCount--
   updateCartCount(productCount)
 })
@@ -172,11 +176,11 @@ productCountPlusEl.addEventListener("click", () => {
   updateCartCount(productCount)
 })
 
-function updateCartCount(count){ 
-  if(count < 0)return
-  if (count == undefined){
-     numberInCartEl.classList.add("hidden")
-  }else{
+function updateCartCount(count) {
+  if (count < 0) return
+  if (count == undefined) {
+    numberInCartEl.classList.add("hidden")
+  } else {
     numberInCartEl.classList.remove("hidden")
   }
   numberInCartEl.innerText = count
@@ -203,7 +207,12 @@ cartCardDeleteEl.addEventListener("click", () => {
   cartCardItemEl.classList.add("hidden")
   itemCheckoutEl.classList.add("hidden")
   emptyCartTextEl.classList.remove("hidden")
-
 })
 
 updateCartCount()
+
+itemCheckoutEl.addEventListener("click", () => {
+  cartCardItemEl.classList.add("hidden")
+  itemCheckoutEl.classList.add("hidden")
+  emptyCartTextEl.classList.remove("hidden")
+})

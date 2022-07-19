@@ -19,7 +19,7 @@
     <script src="index.js" defer></script>
   </head>
   <body class="font-sans min-h-screen relative">
-    <header class="flex items-center justify-between relative ">
+    <header class="flex items-center justify-between relative select-none">
       <div class="container">
         <nav
           class="relative flex items-center justify-between h-[4.25rem] md:h-[5.65rem] lg:h-[7.1875rem] lg:border-b lg:border-GrayishBlue px-6 md:px-12 lg:px-0"
@@ -113,7 +113,7 @@
 
           <!-- mobilemenu -->
           <div
-            class="mobilemenu absolute top-0 -left-full w-screen h-screen bg-VeryDarkBlue/80 flex flex-col px-7 lg:hidden duration-500 z-50"
+            class="mobilemenu absolute top-0 -left-full w-screen h-screen bg-VeryDarkBlue/80 flex flex-col px-7 md:hidden duration-500 z-50"
           >
           <div class="w-[66.67%] absolute top-0 left-0 pl-7 bg-White h-screen">
             <div class="mt-8 mb-14">
@@ -173,7 +173,7 @@
             cart
           </p>
 
-          <div class="flex items-center justify-center flex-col h-[70%]">
+          <div class="flex items-center justify-center flex-col h-[70%] relative">
             <p class="text-base font-bold text-DarkGrayishBlue empty">Your cart is empty</p>
             
              <!-- item -->
@@ -193,12 +193,13 @@
                 <div class="px-6 w-full hidden" data-item-checkout>
                   <button class="w-full h-[3.375rem] bg-Orange rounded-md capitalize text-LightGrayishBlue text-lg tracking-wide font-bold hover:bg-Orange/60 hover:shadow-xl hover:shadow-PaleOrange">checkout</button>
               </div>
+            
           </div>
         </div>
       </div>
     </header>
 
-    <main>
+    <main class="select-none">
 
       <div class="container flex items-start lg:items-center justify-center flex-col lg:flex-row lg:space-x-[7.8125rem] lg:py-[5.625rem] lg:px-6">
 
@@ -348,7 +349,7 @@
 
 
     <footer>
-    <div class="attribution">
+    <div class="attribution select-none">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="https://www.frontendmentor.io/headbwoi" target="_blank">Headbwoi</a>.
     </div>

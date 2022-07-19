@@ -1,8 +1,9 @@
+/* - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
+- Weights: 400, 700 */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
 
 .line{
     @apply relative after:absolute after:-bottom-[2.9375rem] after:left-0 after:w-full after:h-1 after:bg-Orange after:scale-0 after:duration-500 hover:after:scale-100
@@ -68,7 +69,16 @@
         opacity: 1;
     }
 }
-/* - Family: [Kumbh Sans](https://fonts.google.com/specimen/Kumbh+Sans)
-- Weights: 400, 700 */
+.success{
+    @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-Orange rounded-full
+}
+
+.leftArrow{
+    @apply bg-PaleOrange -rotate-45 w-2 h-10 absolute top-1/2 left-[30%] -translate-y-1/2
+}
+.rightArrow{
+    @apply bg-PaleOrange rotate-45 w-2 h-16 absolute top-1/2 right-[37%] -translate-y-[60%]
+}
+
 .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
